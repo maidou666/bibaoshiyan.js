@@ -16,7 +16,16 @@
     init=itcast.fn.init=function(selector,context){
 
     };
-
+//事件模块
+    itcast.fn.extend({
+        click:function(){
+            return this.each(function(){
+                this.addEventListener('click',function(e){
+                    callback.call(this,e,data);
+                });
+            });
+        }
+    })
 
 //    实现init对象，继承字itcast.prototype
     init.prototyp=itcast.fn;
