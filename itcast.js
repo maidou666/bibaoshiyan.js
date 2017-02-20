@@ -24,6 +24,11 @@
                     callback.call(this,e,data);
                 });
             });
+        },
+        on:function(type,callback){
+            return this.each(function(){
+                this.addEventListener(type,callback);
+            });
         }
     })
 
