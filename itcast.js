@@ -18,7 +18,7 @@
     };
 //事件模块
     itcast.fn.extend({
-        click:function(){
+        click:function(callback,data){
             return this.each(function(){
                 this.addEventListener('click',function(e){
                     callback.call(this,e,data);
